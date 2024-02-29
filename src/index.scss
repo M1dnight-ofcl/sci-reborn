@@ -1,0 +1,90 @@
+$bg1:#191919;
+$bg2:#232323;
+$bg3:#0e0e0e;
+$bg4:#272727;
+$bg5:#2e2e2e;
+$txt1:#f3f3f3;
+$txt2:#d7d7d7;
+$txt3:#c2c2c2;
+
+$active:#29de90;
+$active_outline: 1px solid #19774e;
+
+$outline: 1px solid #4a4a4a;
+$g-pad: 5vmin;
+$g-trans: .35s;
+$g-bordrad: 1.5vmin ;
+$g-glow: drop-shadow(0,0,1vmin,#ffffff75);
+
+html *{
+  margin:0;
+  padding:0;
+  position:relative;
+  box-sizing:border-box;
+  word-wrap: break-word;
+  text-wrap: wrap;
+  font-weight: 400;
+  color: $txt1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &::selection{background: $active; color: $bg3;}
+  body { background:$bg1; height: 100%; width: 100%; }
+}
+
+//------------------------------------------
+
+.cwrap {
+  width: 100vmin;
+  height: calc(100% - 5vmin);
+  // background: #fff; // debug
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+}
+nav {
+  height: 7vmin;
+  width: 100dvw;
+  background: $bg3;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 99999;
+  .cwrap {
+    height: 100% !important;
+    width: calc(100vmin - $g-pad) !important;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 1vmin !important;
+  }
+  #logo_a {
+    display: block;
+    height: 100%;
+    aspect-ratio: 1/1;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    font-size: 2.25vmin;
+    color: $txt3;
+  }
+  .nl_dstate {
+    color: $txt3 !important;
+  }
+  .nl_active {
+    color: $active !important;
+  }
+  #nav_logo {
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-image: url('/logo.png');
+    background-size: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+    // $dshadow: drop-shadow(0 0 1vmin $bg3);
+    // filter: $dshadow $dshadow $dshadow $dshadow;
+  }
+}

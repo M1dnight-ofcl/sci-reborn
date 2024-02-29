@@ -1,0 +1,75 @@
+html * {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  text-wrap: wrap;
+  font-weight: 400;
+  color: #f3f3f3;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+html *::selection {
+  background: #29de90;
+  color: #0e0e0e;
+}
+html * body {
+  background: #191919;
+  height: 100%;
+  width: 100%;
+}
+
+.cwrap {
+  width: 100vmin;
+  height: calc(100% - 5vmin);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+}
+
+nav {
+  height: 7vmin;
+  width: 100dvw;
+  background: #0e0e0e;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 99999;
+}
+nav .cwrap {
+  height: 100% !important;
+  width: 95vmin !important;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 1vmin !important;
+}
+nav #logo_a {
+  display: block;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  font-size: 2.25vmin;
+  color: #c2c2c2;
+}
+nav .nl_dstate {
+  color: #c2c2c2 !important;
+}
+nav .nl_active {
+  color: #29de90 !important;
+}
+nav #nav_logo {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-image: url("/logo.png");
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=Articles.css.map */
